@@ -50,16 +50,16 @@ position = Vector2(579.75, 594)
 scale = Vector2(6.08594, 5)
 texture = ExtResource("5_5mjm7")
 
-[node name="Bottle" parent="Table" instance=ExtResource("2_37jhm")]
-position = Vector2(-48.5956, -34)
+[node name="Can1" parent="Table" instance=ExtResource("2_37jhm")]
+position = Vector2(-48.596, -24.5)
 scale = Vector2(0.164313, 0.2)
 
-[node name="Bottle2" parent="Table" instance=ExtResource("2_37jhm")]
-position = Vector2(44.2413, -34)
+[node name="Can2" parent="Table" instance=ExtResource("2_37jhm")]
+position = Vector2(-0.616173, -24.6)
 scale = Vector2(0.164313, 0.2)
 
-[node name="Bottle3" parent="Table" instance=ExtResource("2_37jhm")]
-position = Vector2(-0.616172, -34)
+[node name="Can3" parent="Table" instance=ExtResource("2_37jhm")]
+position = Vector2(44.2413, -24.6)
 scale = Vector2(0.164313, 0.2)
 
 [node name="MoveMouseTimer" type="Timer" parent="."]
@@ -79,7 +79,7 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_5lgnt")
 
 [connection signal="game_won" from="." to="CanvasLayer/GUI" method="_on_carnival_game_won"]
-[connection signal="bottle_hit" from="Table/Bottle" to="." method="_on_bottle_hit"]
-[connection signal="bottle_hit" from="Table/Bottle2" to="." method="_on_bottle_hit"]
-[connection signal="bottle_hit" from="Table/Bottle3" to="." method="_on_bottle_hit"]
+[connection signal="bottle_hit" from="Table/Can1" to="." method="_on_bottle_hit"]
+[connection signal="bottle_hit" from="Table/Can2" to="." method="_on_bottle_hit"]
+[connection signal="bottle_hit" from="Table/Can3" to="." method="_on_bottle_hit"]
 [connection signal="timeout" from="MoveMouseTimer" to="." method="_on_move_mouse_timer_timeout"]

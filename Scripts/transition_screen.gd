@@ -7,9 +7,19 @@ signal animation_finished
 func _ready():
 	fade_in()
 
+func fade_full():
+	fade_out()
+	bob()
+	fade_in()
+
 func fade_out():
 	anim_sprite.visible = true
 	anim_sprite.play("FadeOut")
+	await anim_sprite.animation_finished
+
+func bob():
+	anim_sprite.visible = true
+	anim_sprite.play("bob")
 	await anim_sprite.animation_finished
 
 func fade_in():
