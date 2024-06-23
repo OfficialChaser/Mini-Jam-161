@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dscu7qkv74g33"]
+
+[ext_resource type="Texture2D" uid="uid://dpeatwttaih5y" path="res://Assets/bob-head/bob-head2.png" id="1_026oe"]
+[ext_resource type="Texture2D" uid="uid://dv10yuyftiqwi" path="res://Assets/bob-head/bob-head1.png" id="1_pt72g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcl2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_026oe")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pt72g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Life" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(77, 77)
+offset_right = 77.0
+offset_bottom = 77.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_dcl2x")
+animation = &"death"
+autoplay = "default"

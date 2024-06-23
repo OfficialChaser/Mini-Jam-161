@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://jddyyuvc83fr"]
+
+[ext_resource type="Script" path="res://Scripts/carnival_game.gd" id="1_118mu"]
+[ext_resource type="PackedScene" uid="uid://bvenvqfcvt7uj" path="res://Scenes/bottle.tscn" id="2_37jhm"]
+[ext_resource type="PackedScene" uid="uid://brp2an7hbk3vf" path="res://Scenes/gui.tscn" id="2_jxmf0"]
+[ext_resource type="Texture2D" uid="uid://bpox80gc7rtxe" path="res://Assets/CarnvialBG.png" id="2_uj5qh"]
+[ext_resource type="FontFile" uid="uid://bll85hvug6nbe" path="res://Assets/monobit.ttf" id="3_1pew5"]
+[ext_resource type="Texture2D" uid="uid://bvntsc3q5nm6m" path="res://Assets/CarnivalTable.png" id="5_5mjm7"]
+[ext_resource type="Texture2D" uid="uid://bwj8vc6x4mxco" path="res://Assets/crosshair.png" id="7_at7gw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lgnt"]
+size = Vector2(22, 22)
+
+[node name="CarnivalGame" type="Node2D"]
+script = ExtResource("1_118mu")
+
+[node name="BGSprite" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+scale = Vector2(6, 6)
+texture = ExtResource("2_uj5qh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("2_jxmf0")]
+
+[node name="ThrowsLabel" type="Label" parent="CanvasLayer"]
+offset_left = 272.0
+offset_top = 486.0
+offset_right = 848.0
+offset_bottom = 596.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1pew5")
+theme_override_font_sizes/font_size = 128
+text = "Throws Left: 3"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ThrowsLabel"]
+visible = false
+z_index = -2
+layout_mode = 0
+offset_left = 35.0
+offset_top = 39.0
+offset_right = 573.0
+offset_bottom = 94.0
+color = Color(1, 1, 0, 1)
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(579.75, 594)
+scale = Vector2(6.08594, 5)
+texture = ExtResource("5_5mjm7")
+
+[node name="Bottle" parent="Table" instance=ExtResource("2_37jhm")]
+position = Vector2(-48.5956, -34)
+scale = Vector2(0.164313, 0.2)
+
+[node name="Bottle2" parent="Table" instance=ExtResource("2_37jhm")]
+position = Vector2(44.2413, -34)
+scale = Vector2(0.164313, 0.2)
+
+[node name="Bottle3" parent="Table" instance=ExtResource("2_37jhm")]
+position = Vector2(-0.616172, -34)
+scale = Vector2(0.164313, 0.2)
+
+[node name="MoveMouseTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+autostart = true
+
+[node name="CrosshairSprite" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("7_at7gw")
+
+[node name="CrosshairArea" type="Area2D" parent="CrosshairSprite"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrosshairSprite/CrosshairArea"]
+shape = SubResource("RectangleShape2D_5lgnt")
+
+[connection signal="game_won" from="." to="CanvasLayer/GUI" method="_on_carnival_game_won"]
+[connection signal="bottle_hit" from="Table/Bottle" to="." method="_on_bottle_hit"]
+[connection signal="bottle_hit" from="Table/Bottle2" to="." method="_on_bottle_hit"]
+[connection signal="bottle_hit" from="Table/Bottle3" to="." method="_on_bottle_hit"]
+[connection signal="timeout" from="MoveMouseTimer" to="." method="_on_move_mouse_timer_timeout"]

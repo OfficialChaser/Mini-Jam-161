@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://bggcx2wg5aaxk"]
+
+[ext_resource type="Script" path="res://Scripts/dollar_effect.gd" id="1_icuup"]
+[ext_resource type="FontFile" uid="uid://bll85hvug6nbe" path="res://Assets/monobit.ttf" id="2_mdgsn"]
+
+[node name="DollarEffect" type="Node2D"]
+script = ExtResource("1_icuup")
+
+[node name="LabelContainer" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="LabelContainer"]
+z_index = 20
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -9.0
+offset_right = 15.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.101961, 0.109804, 0.172549, 1)
+theme_override_fonts/font = ExtResource("2_mdgsn")
+theme_override_font_sizes/font_size = 64
+text = "+$100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="LabelContainer"]
+z_index = 20
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -32.0
+offset_right = 46.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.219608, 0.717647, 0.392157, 1)
+theme_override_fonts/font = ExtResource("2_mdgsn")
+theme_override_font_sizes/font_size = 64
+text = "+$100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EffectTimer" type="Timer" parent="."]
+wait_time = 1.2
+autostart = true
+
+[connection signal="timeout" from="EffectTimer" to="." method="_on_effect_timer_timeout"]

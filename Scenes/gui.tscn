@@ -1,0 +1,220 @@
+[gd_scene load_steps=36 format=3 uid="uid://brp2an7hbk3vf"]
+
+[ext_resource type="PackedScene" uid="uid://dscu7qkv74g33" path="res://Scenes/life.tscn" id="1_1hwr2"]
+[ext_resource type="Script" path="res://Scripts/gui.gd" id="1_8qp27"]
+[ext_resource type="Script" path="res://Scripts/timer_slider.gd" id="2_58fph"]
+[ext_resource type="FontFile" uid="uid://bll85hvug6nbe" path="res://Assets/monobit.ttf" id="4_701pk"]
+[ext_resource type="Texture2D" uid="uid://cagvw3io44e4a" path="res://Assets/win/win1.png" id="5_jh0hg"]
+[ext_resource type="Texture2D" uid="uid://bu1ryieh0avcs" path="res://Assets/win/win2.png" id="6_tsd5s"]
+[ext_resource type="Texture2D" uid="uid://d0p5e1ls2mytn" path="res://Assets/win/win3.png" id="7_c0gp7"]
+[ext_resource type="Texture2D" uid="uid://b1c40s0gr2swf" path="res://Assets/win/win4.png" id="8_fdnwc"]
+[ext_resource type="Texture2D" uid="uid://rwljin4t2is8" path="res://Assets/win/win5.png" id="9_dnbrc"]
+[ext_resource type="Texture2D" uid="uid://cdhq74itvmxuy" path="res://Assets/win/win6.png" id="10_xyc8u"]
+[ext_resource type="Texture2D" uid="uid://3xhjewxo40jx" path="res://Assets/win/win7.png" id="11_3uc1v"]
+[ext_resource type="Texture2D" uid="uid://btxpn7iq5pevn" path="res://Assets/win/win8.png" id="12_4e14r"]
+[ext_resource type="Texture2D" uid="uid://bq8k5ebmfj0fx" path="res://Assets/win/win9.png" id="13_so1v0"]
+[ext_resource type="Texture2D" uid="uid://u35qg53hg462" path="res://Assets/win/win10.png" id="14_vc1ai"]
+[ext_resource type="Texture2D" uid="uid://dloeyh7w5nr3x" path="res://Assets/win/win11.png" id="15_ud3n4"]
+[ext_resource type="Texture2D" uid="uid://bjykpvm6bj0om" path="res://Assets/win/win12.png" id="16_coosq"]
+[ext_resource type="Texture2D" uid="uid://cw2g1v3tdq5wj" path="res://Assets/win/win13.png" id="17_7chsb"]
+[ext_resource type="Texture2D" uid="uid://d2hr7elgabttd" path="res://Assets/win/win14.png" id="18_36oci"]
+[ext_resource type="Texture2D" uid="uid://bfxgd2hscnn1c" path="res://Assets/win/win15.png" id="19_vu8ku"]
+[ext_resource type="Texture2D" uid="uid://bbjlhihsf0lkr" path="res://Assets/win/win16.png" id="20_0s1il"]
+[ext_resource type="Texture2D" uid="uid://b27jyrlwy5g53" path="res://Assets/win/win17.png" id="21_gm0ol"]
+[ext_resource type="Texture2D" uid="uid://d1l78qm2ie5vf" path="res://Assets/win/win18.png" id="22_sgoqb"]
+[ext_resource type="Texture2D" uid="uid://ckchktc24jh70" path="res://Assets/win/win19.png" id="23_trlgg"]
+[ext_resource type="Texture2D" uid="uid://xalj8irxj5ig" path="res://Assets/win/win20.png" id="24_fpfi3"]
+[ext_resource type="Texture2D" uid="uid://bc7hybwbr41o2" path="res://Assets/win/win21.png" id="25_sfi5c"]
+[ext_resource type="Texture2D" uid="uid://b5ayuvtpd0gu8" path="res://Assets/win/win22.png" id="26_ok53k"]
+[ext_resource type="Texture2D" uid="uid://dqc5od1kxsk6j" path="res://Assets/win/win23.png" id="27_sq50o"]
+[ext_resource type="Texture2D" uid="uid://pxapjss05c7x" path="res://Assets/win/win24.png" id="28_bkig2"]
+[ext_resource type="Texture2D" uid="uid://dlymspmbsouey" path="res://Assets/win/win25.png" id="29_8buwp"]
+[ext_resource type="Texture2D" uid="uid://cb72nfydk3fq2" path="res://Assets/win/win26.png" id="30_y1a1v"]
+[ext_resource type="Texture2D" uid="uid://d06dsig1f3rf2" path="res://Assets/win/win27.png" id="31_ep81h"]
+[ext_resource type="Texture2D" uid="uid://bnm10ind7ojs6" path="res://Assets/win/win28.png" id="32_cg46t"]
+[ext_resource type="Texture2D" uid="uid://clwlbelyh1078" path="res://Assets/win/win29.png" id="33_ylmpq"]
+[ext_resource type="Texture2D" uid="uid://cv2ynl0vw3eu8" path="res://Assets/win/win30.png" id="34_qoru7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thp88"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jh0hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tsd5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c0gp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fdnwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dnbrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xyc8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3uc1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4e14r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_so1v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vc1ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ud3n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_coosq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7chsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_36oci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vu8ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0s1il")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gm0ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sgoqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_trlgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fpfi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_sfi5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ok53k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_sq50o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_bkig2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_8buwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_y1a1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ep81h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_cg46t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ylmpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qoru7")
+}],
+"loop": false,
+"name": &"win",
+"speed": 30.0
+}]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_8qp27")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(575, 325)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_thp88")
+autoplay = "default"
+
+[node name="LivesContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 64.0
+offset_right = 305.0
+offset_bottom = 141.0
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="Life" parent="LivesContainer" instance=ExtResource("1_1hwr2")]
+layout_mode = 2
+
+[node name="Life2" parent="LivesContainer" instance=ExtResource("1_1hwr2")]
+layout_mode = 2
+
+[node name="Life3" parent="LivesContainer" instance=ExtResource("1_1hwr2")]
+layout_mode = 2
+
+[node name="TimerSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -287.0
+offset_top = -48.0
+offset_right = 287.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+step = 0.01
+value = 100.0
+editable = false
+scrollable = false
+script = ExtResource("2_58fph")
+
+[node name="Timer" type="Timer" parent="TimerSlider"]
+one_shot = true
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 0.423529)
+layout_mode = 0
+offset_left = 675.0
+offset_top = 23.0
+offset_right = 1169.0
+offset_bottom = 109.0
+
+[node name="MoneyLabel" type="Label" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -456.0
+offset_bottom = 110.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_701pk")
+theme_override_font_sizes/font_size = 128
+text = "Money: $1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="TimerSlider/Timer" to="TimerSlider" method="_on_timer_timeout"]

@@ -1,0 +1,132 @@
+[gd_scene load_steps=10 format=3 uid="uid://btqosybqou1ig"]
+
+[ext_resource type="Script" path="res://Scripts/upgrade_menu.gd" id="1_kokcv"]
+[ext_resource type="PackedScene" uid="uid://brp2an7hbk3vf" path="res://Scenes/gui.tscn" id="1_qfxr1"]
+[ext_resource type="Script" path="res://Scripts/upgrade_card.gd" id="2_w3lrs"]
+[ext_resource type="FontFile" uid="uid://bll85hvug6nbe" path="res://Assets/monobit.ttf" id="4_anr2d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1s1em"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pbjmq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j2pkn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_thbhy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vr01"]
+
+[node name="UpgradeMenu" type="Node2D"]
+script = ExtResource("1_kokcv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("1_qfxr1")]
+upgrade_menu = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="SmallUpgradeCard" type="Node2D" parent="." groups=["cards"]]
+position = Vector2(-173, -62)
+script = ExtResource("2_w3lrs")
+
+[node name="ColorRect" type="ColorRect" parent="SmallUpgradeCard"]
+offset_right = 84.0
+offset_bottom = 134.0
+pivot_offset = Vector2(42, 62)
+
+[node name="Button" type="Button" parent="SmallUpgradeCard/ColorRect"]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 134.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1s1em")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pbjmq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j2pkn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_thbhy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1vr01")
+
+[node name="UpgradeText" type="Label" parent="SmallUpgradeCard/ColorRect"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 19.0
+offset_right = 69.0
+offset_bottom = 54.0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(26.6667, 17.3333)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("4_anr2d")
+theme_override_font_sizes/font_size = 16
+text = "More checks for Bob"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CostText" type="Label" parent="SmallUpgradeCard/ColorRect"]
+layout_mode = 0
+offset_top = 78.0
+offset_right = 56.0
+offset_bottom = 115.0
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("4_anr2d")
+theme_override_font_sizes/font_size = 16
+text = "10% of  budget"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="LargeUpgradeCard" type="Node2D" parent="." groups=["cards"]]
+position = Vector2(92, -62)
+script = ExtResource("2_w3lrs")
+
+[node name="ColorRect" type="ColorRect" parent="LargeUpgradeCard"]
+offset_right = 84.0
+offset_bottom = 134.0
+pivot_offset = Vector2(42, 62)
+
+[node name="Button" type="Button" parent="LargeUpgradeCard/ColorRect"]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 134.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1s1em")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_pbjmq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j2pkn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_thbhy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1vr01")
+
+[node name="UpgradeText" type="Label" parent="LargeUpgradeCard/ColorRect"]
+layout_mode = 0
+offset_top = 9.0
+offset_right = 56.0
+offset_bottom = 46.0
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("4_anr2d")
+theme_override_font_sizes/font_size = 16
+text = "More checks for Bob"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CostText" type="Label" parent="LargeUpgradeCard/ColorRect"]
+layout_mode = 0
+offset_top = 78.0
+offset_right = 56.0
+offset_bottom = 115.0
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("4_anr2d")
+theme_override_font_sizes/font_size = 16
+text = "10% of  budget"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="button_down" from="SmallUpgradeCard/ColorRect/Button" to="." method="_on_s_button_down"]
+[connection signal="button_down" from="SmallUpgradeCard/ColorRect/Button" to="SmallUpgradeCard" method="_on_button_down"]
+[connection signal="mouse_entered" from="SmallUpgradeCard/ColorRect/Button" to="SmallUpgradeCard" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="SmallUpgradeCard/ColorRect/Button" to="SmallUpgradeCard" method="_on_button_mouse_exited"]
+[connection signal="button_down" from="LargeUpgradeCard/ColorRect/Button" to="." method="_on_l_button_down"]
+[connection signal="button_down" from="LargeUpgradeCard/ColorRect/Button" to="LargeUpgradeCard" method="_on_button_down"]
+[connection signal="mouse_entered" from="LargeUpgradeCard/ColorRect/Button" to="LargeUpgradeCard" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="LargeUpgradeCard/ColorRect/Button" to="LargeUpgradeCard" method="_on_button_mouse_exited"]

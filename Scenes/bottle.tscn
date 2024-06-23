@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvenvqfcvt7uj"]
+
+[ext_resource type="Script" path="res://Scripts/bottle.gd" id="1_p5tms"]
+[ext_resource type="Texture2D" uid="uid://b7ka4ypsav7ab" path="res://Assets/bottle.png" id="2_4ihcn"]
+[ext_resource type="Texture2D" uid="uid://6pb3174l1nmn" path="res://Assets/bottle2.png" id="3_otnyd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpsb8"]
+size = Vector2(80, 155)
+
+[sub_resource type="Animation" id="Animation_ttrnh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_4ihcn")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5fgua"]
+resource_name = "crack"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_otnyd")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xu4vw"]
+_data = {
+"RESET": SubResource("Animation_ttrnh"),
+"crack": SubResource("Animation_5fgua")
+}
+
+[node name="Bottle" type="Node2D"]
+script = ExtResource("1_p5tms")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("2_4ihcn")
+
+[node name="BottleArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottleArea"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_kpsb8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xu4vw")
+}
+
+[connection signal="area_entered" from="BottleArea" to="." method="_on_bottle_area_entered"]
+[connection signal="area_exited" from="BottleArea" to="." method="_on_bottle_area_exited"]

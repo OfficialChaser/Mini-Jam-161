@@ -1,0 +1,14 @@
+AnimatedSprite2D
+AnimationPlayer
+Control
+CollisionShape2D
+CharacterBody2D
+TextureRect
+Sprite2D
+AudioStreamPlayer
+AudioStreamPlayer2D
+ColorRect
+Area2D
+Button
+Camera2D
+Label

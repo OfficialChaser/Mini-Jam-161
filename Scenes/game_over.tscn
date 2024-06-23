@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfek27pibqfhg"]
+
+[ext_resource type="FontFile" uid="uid://bll85hvug6nbe" path="res://Assets/monobit.ttf" id="1_3y2o7"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_ydav1"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ydav1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.254902, 0.65098, 0.964706, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_top = -57.0
+offset_right = 1152.0
+offset_bottom = 265.0
+theme_override_fonts/font = ExtResource("1_3y2o7")
+theme_override_font_sizes/font_size = 256
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 90.0
+offset_right = 1152.0
+offset_bottom = 412.0
+theme_override_fonts/font = ExtResource("1_3y2o7")
+theme_override_font_sizes/font_size = 128
+text = "Your budget for a car is:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MoneyLabel" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 271.0
+offset_right = 1008.0
+offset_bottom = 490.0
+theme_override_fonts/font = ExtResource("1_3y2o7")
+theme_override_font_sizes/font_size = 256
+text = "$10000"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -146.5
+offset_top = -158.0
+offset_right = 146.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Menu"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

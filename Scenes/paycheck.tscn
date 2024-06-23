@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://c24rwnivgv7vw"]
+
+[ext_resource type="Script" path="res://Scripts/paycheck.gd" id="1_q8wup"]
+[ext_resource type="Texture2D" uid="uid://bfm2ut7jkovo0" path="res://Assets/Paycheck.png" id="2_xeo0q"]
+[ext_resource type="FontFile" uid="uid://bll85hvug6nbe" path="res://Assets/monobit.ttf" id="3_i1bch"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lcbvm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2ldf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eok62"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ngcj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6pbh1"]
+
+[node name="Paycheck" type="Node2D"]
+script = ExtResource("1_q8wup")
+npc_names = Array[String](["Sally", "Joe", "Jane", "Chase", "Crazed", "Brion", "Suzie", "Bill", "Egbert", "Carl"])
+
+[node name="SizeNode" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SizeNode"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_xeo0q")
+
+[node name="Highlight" type="ColorRect" parent="SizeNode/Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -8.0
+offset_right = -16.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Button" type="Button" parent="SizeNode/Sprite2D"]
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 16.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lcbvm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x2ldf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_eok62")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3ngcj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6pbh1")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="SizeNode"]
+position = Vector2(-1.40071e-06, 8.9407e-07)
+scale = Vector2(4.8, 2.4)
+
+[node name="NameLabel" type="Label" parent="SizeNode"]
+offset_left = -33.3333
+offset_top = -8.0
+offset_right = 34.6667
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_i1bch")
+theme_override_font_sizes/font_size = 32
+text = "Bob"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MoneyLabel" type="Label" parent="SizeNode"]
+offset_left = 15.0
+offset_top = -19.0
+offset_right = 45.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_i1bch")
+theme_override_font_sizes/font_size = 16
+text = "$100 "
+horizontal_alignment = 2
+
+[node name="MoneyLabel2" type="Label" parent="SizeNode"]
+offset_left = -40.0
+offset_top = -18.6667
+offset_right = 7.0
+offset_bottom = -2.66667
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_i1bch")
+theme_override_font_sizes/font_size = 16
+text = "Check for:"
+horizontal_alignment = 2
+
+[connection signal="button_down" from="SizeNode/Sprite2D/Button" to="." method="_on_button_down"]
+[connection signal="mouse_entered" from="SizeNode/Sprite2D/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="SizeNode/Sprite2D/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="screen_entered" from="SizeNode/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="SizeNode/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
