@@ -5,11 +5,6 @@ res://Scenes/paycheck_game.tscn
 res://Scenes/transition_screen.tscn
 res://Scenes/main_menu.tscn
 res://Scenes/bottle.tscn
-res://Scripts/timer_slider.gd
-res://Scripts/global.gd
-res://Scripts/scene_changer.gd
-res://Scripts/carnival_game.gd
-res://Scripts/transition_screen.gd
 res://Scenes/upgrade_menu.tscn
-res://Scripts/upgrade_menu.gd
-res://Scripts/upgrade_card.gd
+res://Scenes/game_over.tscn
+res://Scripts/game_over.gd

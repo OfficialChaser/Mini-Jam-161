@@ -1,10 +1,10 @@
+AnimatedSprite2D
+AnimationPlayer
 ColorRect
 Label
 Sprite2D
 Control
 CanvasLayer
-AnimationPlayer
-AnimatedSprite2D
 AnimationTree
 CollisionShape2D
 CharacterBody2D

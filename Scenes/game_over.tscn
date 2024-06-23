@@ -1,7 +1,108 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfek27pibqfhg"]
+[gd_scene load_steps=16 format=3 uid="uid://bfek27pibqfhg"]
 
 [ext_resource type="FontFile" uid="uid://bll85hvug6nbe" path="res://Assets/monobit.ttf" id="1_3y2o7"]
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_ydav1"]
+[ext_resource type="Texture2D" uid="uid://jkt81wwurq5p" path="res://Assets/bob-outlined/bob-sheet.png" id="3_qxafo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqr6y"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yw5l"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqu2n"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n0i5"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubsus"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh7ve"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng5o8"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08p48"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kexnl"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0unwf"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_320li"]
+atlas = ExtResource("3_qxafo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kq6nj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqr6y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1yw5l")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_dqu2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n0i5")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_ubsus")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh7ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng5o8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08p48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kexnl")
+}],
+"loop": true,
+"name": &"run",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0unwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_320li")
+}],
+"loop": true,
+"name": &"weep",
+"speed": 10.0
+}]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -20,9 +121,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.254902, 0.65098, 0.964706, 1)
+color = Color(1, 0.803922, 0.458824, 1)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_top = -57.0
 offset_right = 1152.0
 offset_bottom = 265.0
@@ -33,9 +135,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
-offset_top = 90.0
-offset_right = 1152.0
-offset_bottom = 412.0
+layout_mode = 0
+offset_left = -839.0
+offset_top = 83.0
+offset_right = 313.0
+offset_bottom = 405.0
 theme_override_fonts/font = ExtResource("1_3y2o7")
 theme_override_font_sizes/font_size = 128
 text = "Your budget for a car is:"
@@ -44,6 +148,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="MoneyLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 144.0
 offset_top = 271.0
 offset_right = 1008.0
@@ -56,6 +161,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="MenuButton" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -68,5 +174,15 @@ offset_right = 146.5
 grow_horizontal = 2
 grow_vertical = 0
 text = "Menu"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(170.75, 477.25)
+scale = Vector2(10.5781, 10.5781)
+sprite_frames = SubResource("SpriteFrames_kq6nj")
+animation = &"idle"
+frame_progress = 0.965006
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+root_node = NodePath("../..")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
