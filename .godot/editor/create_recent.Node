@@ -1,5 +1,6 @@
-AnimatedSprite2D
 AnimationPlayer
+AnimatedSprite2D
+AnimationTree
 Control
 CollisionShape2D
 CharacterBody2D
@@ -11,4 +12,3 @@ ColorRect
 Area2D
 Button
 Camera2D
-Label
