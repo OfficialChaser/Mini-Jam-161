@@ -136,10 +136,10 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = -839.0
-offset_top = 83.0
-offset_right = 313.0
-offset_bottom = 405.0
+offset_left = 1.0
+offset_top = 86.0
+offset_right = 1153.0
+offset_bottom = 408.0
 theme_override_fonts/font = ExtResource("1_3y2o7")
 theme_override_font_sizes/font_size = 128
 text = "Your budget for a car is:"
@@ -180,7 +180,7 @@ position = Vector2(170.75, 477.25)
 scale = Vector2(10.5781, 10.5781)
 sprite_frames = SubResource("SpriteFrames_kq6nj")
 animation = &"idle"
-frame_progress = 0.965006
+frame_progress = 0.60205
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
 root_node = NodePath("../..")
