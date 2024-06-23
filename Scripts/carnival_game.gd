@@ -17,7 +17,7 @@ var balls_left := 5
 @onready var throws_label = $CanvasLayer/ThrowsLabel
 
 func _ready():
-	TransitionScreen.fade_full()
+	TransitionScreen.fade_in()	
 	$CrosshairSprite.global_position = get_global_mouse_position()
 	balls_left = Global.throws
 	new_location = get_global_mouse_position() + random_point()

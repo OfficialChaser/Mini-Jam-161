@@ -37,5 +37,5 @@ func update_lives():
 
 func _on_carnival_game_won():
 	if !win_anim_played:
-		$AnimatedSprite2D.play("win")
+		$winscreen.play("win")
 		win_anim_played = true

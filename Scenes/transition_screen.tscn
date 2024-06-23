@@ -295,7 +295,7 @@ animations = [{
 "speed": 30.0
 }, {
 "frames": [{
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vlka5")
 }, {
 "duration": 1.0,
@@ -343,12 +343,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kl11u")
 }],
-"loop": true,
+"loop": false,
 "name": &"FadeOut",
 "speed": 30.0
 }, {
 "frames": [{
-"duration": 1.5,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8d7qi")
 }, {
 "duration": 1.0,
@@ -429,9 +429,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n0f1k")
 }],
-"loop": true,
+"loop": false,
 "name": &"bob",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [],
 "loop": true,
@@ -449,7 +449,7 @@ script = ExtResource("1_ugmge")
 position = Vector2(576.812, 326)
 scale = Vector2(6.00196, 5.98148)
 sprite_frames = SubResource("SpriteFrames_cib42")
-animation = &"FadeIn"
+animation = &"bob"
 autoplay = "default"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_finished"]

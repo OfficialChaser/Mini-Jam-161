@@ -66,7 +66,6 @@ func _process(_delta):
 	pass
 
 func queue_next_scene():
-	TransitionScreen.fade_out()
 	if (lives != 0):
 		reset_upgrades()
 		previous_minigame = current_minigame

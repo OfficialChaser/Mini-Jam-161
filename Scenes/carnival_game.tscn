@@ -55,11 +55,11 @@ position = Vector2(-48.596, -24.5)
 scale = Vector2(0.164313, 0.2)
 
 [node name="Can2" parent="Table" instance=ExtResource("2_37jhm")]
-position = Vector2(-0.616173, -24.6)
+position = Vector2(-0.616, -24.5)
 scale = Vector2(0.164313, 0.2)
 
 [node name="Can3" parent="Table" instance=ExtResource("2_37jhm")]
-position = Vector2(44.2413, -24.6)
+position = Vector2(44.241, -24.5)
 scale = Vector2(0.164313, 0.2)
 
 [node name="MoveMouseTimer" type="Timer" parent="."]

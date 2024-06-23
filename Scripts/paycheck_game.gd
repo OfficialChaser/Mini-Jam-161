@@ -19,6 +19,7 @@ var zooming := false
 var new_camera_loc := Vector2.ZERO
 
 func _ready():
+	TransitionScreen.fade_in()
 	for loc in left_spawn_locations.get_children():
 		spawn_locations[loc] = Vector2.RIGHT
 	for loc in right_spawn_locations.get_children():
