@@ -19,15 +19,15 @@ func _ready():
 
 func _process(_delta):
 	if !MinigameManager.minigame_complete:
-		if(timer.time_left<1):
+		if(timer.time_left == 0):
 			timerAnim.play("kaboom")
-		elif(timer.time_left<2):
+		elif(timer.time_left < duration * .2):
 			timerAnim.play("loop5")
-		elif(timer.time_left<3):
+		elif(timer.time_left< duration * .4):
 			timerAnim.play("loop4")
-		elif(timer.time_left<4):
+		elif(timer.time_left< duration * .6):
 			timerAnim.play("loop3")
-		elif(timer.time_left<5):
+		elif(timer.time_left< duration * .8):
 			timerAnim.play("loop2")
 		else:
 			timerAnim.play("loop1")

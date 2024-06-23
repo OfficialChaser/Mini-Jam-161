@@ -42,12 +42,14 @@ func _process(_delta):
 	elif (minigame_status == "won"):
 		game_won.emit()
 		MinigameManager.minigame_complete = true
+		minigame_status = "over"
 		await get_tree().create_timer(2).timeout
 		Global.queue_next_scene()
 
 	elif (minigame_status == "lost"):
 		MinigameManager.minigame_complete = true
 		$CanvasLayer/ThrowsLabel/ColorRect.visible = true
+		minigame_status = "over"
 		throws_label.add_theme_color_override("font_color",Color.DARK_RED) 
 		await get_tree().create_timer(3).timeout
 		Global.queue_next_scene()

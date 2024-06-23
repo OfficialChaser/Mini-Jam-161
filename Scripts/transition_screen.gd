@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 signal animation_finished
 
@@ -6,6 +6,9 @@ signal animation_finished
 
 func _ready():
 	fade_in()
+
+func _process(_delta):
+	pass
 
 func fade_in():
 	anim_sprite.visible = true

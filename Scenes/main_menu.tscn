@@ -386,4 +386,6 @@ text = "Play"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

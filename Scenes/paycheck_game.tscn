@@ -212,6 +212,7 @@ texture = ExtResource("2_oqvgn")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource("2_6nnlx")]
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
@@ -233,7 +234,7 @@ position = Vector2(-400, 100)
 position = Vector2(400, 0)
 
 [node name="Marker2D2" type="Marker2D" parent="RightSpawnLocations"]
-position = Vector2(400, -100)
+position = Vector2(406, -102)
 
 [node name="Marker2D3" type="Marker2D" parent="RightSpawnLocations"]
 position = Vector2(400, 100)

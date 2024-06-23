@@ -2,12 +2,11 @@ res://Scenes/carnival_game.tscn
 res://Scenes/gui.tscn
 res://Scenes/music_player.tscn
 res://Scenes/paycheck_game.tscn
-res://Scenes/main_menu.tscn
 res://Scenes/transition_screen.tscn
+res://Scenes/main_menu.tscn
 res://Scenes/bottle.tscn
-res://Scripts/gui.gd
+res://Scripts/timer_slider.gd
+res://Scripts/global.gd
+res://Scripts/scene_changer.gd
 res://Scripts/carnival_game.gd
 res://Scripts/transition_screen.gd
-res://Scripts/global.gd
-res://Scripts/paycheck_game.gd
-res://Scripts/timer_slider.gd

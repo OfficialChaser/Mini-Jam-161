@@ -1,3 +1,4 @@
+CanvasLayer
 AnimationPlayer
 AnimatedSprite2D
 AnimationTree
@@ -11,4 +12,3 @@ AudioStreamPlayer2D
 ColorRect
 Area2D
 Button
-Camera2D
