@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1719169031
+::res://::1719172803
 bob_platformer.gd::GDScript::-1::1719156698::0::1::::<>CharacterBody2D<>::
 default_bus_layout.tres::AudioBusLayout::3350071972631952695::1719118977::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1719118545::0::1::::<><>::
 icon.svg::CompressedTexture2D::5144259930242785200::1718986261::1718986266::1::::<><>::
-::res://Assets/::1719169020
+::res://Assets/::1719172803
 Ball.png::CompressedTexture2D::4136885939977867237::1719116714::1719116715::1::::<><>::
 bottle1.png::CompressedTexture2D::8168205133807949752::1719117595::1719117608::1::::<><>::
 bottle2.png::CompressedTexture2D::2206931954686213497::1719117595::1719117608::1::::<><>::
@@ -78,6 +78,11 @@ bob-outlined9.png::CompressedTexture2D::3974234674920916259::1719154991::1719155
 tincan1.png::CompressedTexture2D::8055287628899440836::1719169020::1719169020::1::::<><>::
 tincan2.png::CompressedTexture2D::8693854859048020272::1719169020::1719169020::1::::<><>::
 tincan3.png::CompressedTexture2D::7877923842142214161::1719169020::1719169020::1::::<><>::
+::res://Assets/cards/::1719172803
+cards1.png::CompressedTexture2D::8273942167624328794::1719172696::1719172804::1::::<><>::
+cards2.png::CompressedTexture2D::1077269558920978069::1719172696::1719172698::1::::<><>::
+cards3.png::CompressedTexture2D::2266933774815569137::1719172696::1719172698::1::::<><>::
+cards4.png::CompressedTexture2D::2951195548632048038::1719172696::1719172698::1::::<><>::
 ::res://Assets/timer/::1719169020
 timer-sheet.png::CompressedTexture2D::4989359060171854943::1719169020::1719169020::1::::<><>::
 ::res://Assets/transition/::1719169020
@@ -116,37 +121,38 @@ win30.png::CompressedTexture2D::6304026323653266041::1719155829::1719155847::1::
 ::res://Music/::1719119277
 Bob MiniJam Main Theme.wav::AudioStreamWAV::5720090514978761013::1719119200::1719119200::1::::<><>::
 Bob MiniJam Title Screen.wav::AudioStreamWAV::4623201030020542171::1719119277::1719119277::1::::<><>::
-::res://Scenes/::1719169020
+::res://Scenes/::1719172589
 ball.tscn::PackedScene::9202069704758513326::1719158237::0::1::::<><>::uid://by6653rx68j2t::::res://Assets/Ball.png<>res://Scripts/ball.gd
 bob_platformer.tscn::PackedScene::7679185139826933354::1719157686::0::1::::<><>::res://bob_platformer.gd<>uid://cpp6jyddnt8rg::::res://Assets/bob-outlined/bob-outlined7.png<>uid://ehvwk76tr4wo::::res://Assets/bob-outlined/bob-outlined6.png<>uid://dvlk7afi76xgb::::res://Assets/bob-outlined/bob-outlined8.png<>uid://bwvfcgri4e5lf::::res://Assets/bob-outlined/bob-outlined9.png
-bottle.tscn::PackedScene::3869471581903329817::1719169020::0::1::::<><>::res://Scripts/bottle.gd<>uid://dm1bn7mveiday::::res://Assets/cans/tincan1.png<>uid://dv4mrwmfkvau7::::res://Assets/cans/tincan2.png<>uid://dkieiwo1eenjl::::res://Assets/cans/tincan3.png
-carnival_game.tscn::PackedScene::638119028451125619::1719169020::0::1::::<><>::res://Scripts/carnival_game.gd<>uid://bvenvqfcvt7uj::::res://Scenes/bottle.tscn<>uid://brp2an7hbk3vf::::res://Scenes/gui.tscn<>uid://bpox80gc7rtxe::::res://Assets/CarnvialBG.png<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf<>uid://bvntsc3q5nm6m::::res://Assets/CarnivalTable.png<>uid://bwj8vc6x4mxco::::res://Assets/crosshair.png
+bottle.tscn::PackedScene::3869471581903329817::1719172589::0::1::::<><>::res://Scripts/bottle.gd<>uid://dm1bn7mveiday::::res://Assets/cans/tincan1.png<>uid://dv4mrwmfkvau7::::res://Assets/cans/tincan2.png<>uid://dkieiwo1eenjl::::res://Assets/cans/tincan3.png
+carnival_game.tscn::PackedScene::638119028451125619::1719172589::0::1::::<><>::res://Scripts/carnival_game.gd<>uid://bvenvqfcvt7uj::::res://Scenes/bottle.tscn<>uid://brp2an7hbk3vf::::res://Scenes/gui.tscn<>uid://bpox80gc7rtxe::::res://Assets/CarnvialBG.png<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf<>uid://bvntsc3q5nm6m::::res://Assets/CarnivalTable.png<>uid://bwj8vc6x4mxco::::res://Assets/crosshair.png
 dollar_effect.tscn::PackedScene::2820103971719854008::1719086881::0::1::::<><>::res://Scripts/dollar_effect.gd<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf
 game_over.tscn::PackedScene::2746279503547324376::1719110830::0::1::::<><>::uid://bll85hvug6nbe::::res://Assets/monobit.ttf<>res://Scripts/game_over.gd
-gui.tscn::PackedScene::3612236783212346367::1719169020::0::1::::<><>::uid://dscu7qkv74g33::::res://Scenes/life.tscn<>res://Scripts/gui.gd<>res://Scripts/timer_slider.gd<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf<>uid://cagvw3io44e4a::::res://Assets/win/win1.png<>uid://bu1ryieh0avcs::::res://Assets/win/win2.png<>uid://d0p5e1ls2mytn::::res://Assets/win/win3.png<>uid://b1c40s0gr2swf::::res://Assets/win/win4.png<>uid://rwljin4t2is8::::res://Assets/win/win5.png<>uid://cdhq74itvmxuy::::res://Assets/win/win6.png<>uid://3xhjewxo40jx::::res://Assets/win/win7.png<>uid://btxpn7iq5pevn::::res://Assets/win/win8.png<>uid://bq8k5ebmfj0fx::::res://Assets/win/win9.png<>uid://u35qg53hg462::::res://Assets/win/win10.png<>uid://dloeyh7w5nr3x::::res://Assets/win/win11.png<>uid://bjykpvm6bj0om::::res://Assets/win/win12.png<>uid://cw2g1v3tdq5wj::::res://Assets/win/win13.png<>uid://d2hr7elgabttd::::res://Assets/win/win14.png<>uid://bfxgd2hscnn1c::::res://Assets/win/win15.png<>uid://bbjlhihsf0lkr::::res://Assets/win/win16.png<>uid://b27jyrlwy5g53::::res://Assets/win/win17.png<>uid://d1l78qm2ie5vf::::res://Assets/win/win18.png<>uid://ckchktc24jh70::::res://Assets/win/win19.png<>uid://xalj8irxj5ig::::res://Assets/win/win20.png<>uid://bc7hybwbr41o2::::res://Assets/win/win21.png<>uid://b5ayuvtpd0gu8::::res://Assets/win/win22.png<>uid://dqc5od1kxsk6j::::res://Assets/win/win23.png<>uid://pxapjss05c7x::::res://Assets/win/win24.png<>uid://dlymspmbsouey::::res://Assets/win/win25.png<>uid://cb72nfydk3fq2::::res://Assets/win/win26.png<>uid://d06dsig1f3rf2::::res://Assets/win/win27.png<>uid://bnm10ind7ojs6::::res://Assets/win/win28.png<>uid://clwlbelyh1078::::res://Assets/win/win29.png<>uid://cv2ynl0vw3eu8::::res://Assets/win/win30.png<>uid://cdc5arcncn63d::::res://Assets/timer/timer-sheet.png
+gui.tscn::PackedScene::3612236783212346367::1719172589::0::1::::<><>::uid://dscu7qkv74g33::::res://Scenes/life.tscn<>res://Scripts/gui.gd<>res://Scripts/timer_slider.gd<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf<>uid://cagvw3io44e4a::::res://Assets/win/win1.png<>uid://bu1ryieh0avcs::::res://Assets/win/win2.png<>uid://d0p5e1ls2mytn::::res://Assets/win/win3.png<>uid://b1c40s0gr2swf::::res://Assets/win/win4.png<>uid://rwljin4t2is8::::res://Assets/win/win5.png<>uid://cdhq74itvmxuy::::res://Assets/win/win6.png<>uid://3xhjewxo40jx::::res://Assets/win/win7.png<>uid://btxpn7iq5pevn::::res://Assets/win/win8.png<>uid://bq8k5ebmfj0fx::::res://Assets/win/win9.png<>uid://u35qg53hg462::::res://Assets/win/win10.png<>uid://dloeyh7w5nr3x::::res://Assets/win/win11.png<>uid://bjykpvm6bj0om::::res://Assets/win/win12.png<>uid://cw2g1v3tdq5wj::::res://Assets/win/win13.png<>uid://d2hr7elgabttd::::res://Assets/win/win14.png<>uid://bfxgd2hscnn1c::::res://Assets/win/win15.png<>uid://bbjlhihsf0lkr::::res://Assets/win/win16.png<>uid://b27jyrlwy5g53::::res://Assets/win/win17.png<>uid://d1l78qm2ie5vf::::res://Assets/win/win18.png<>uid://ckchktc24jh70::::res://Assets/win/win19.png<>uid://xalj8irxj5ig::::res://Assets/win/win20.png<>uid://bc7hybwbr41o2::::res://Assets/win/win21.png<>uid://b5ayuvtpd0gu8::::res://Assets/win/win22.png<>uid://dqc5od1kxsk6j::::res://Assets/win/win23.png<>uid://pxapjss05c7x::::res://Assets/win/win24.png<>uid://dlymspmbsouey::::res://Assets/win/win25.png<>uid://cb72nfydk3fq2::::res://Assets/win/win26.png<>uid://d06dsig1f3rf2::::res://Assets/win/win27.png<>uid://bnm10ind7ojs6::::res://Assets/win/win28.png<>uid://clwlbelyh1078::::res://Assets/win/win29.png<>uid://cv2ynl0vw3eu8::::res://Assets/win/win30.png<>uid://cdc5arcncn63d::::res://Assets/timer/timer-sheet.png
 hurdles_game.tscn::PackedScene::8162056750433177914::1719157680::0::1::::<><>::
 life.tscn::PackedScene::8428062334151992436::1719157680::0::1::::<><>::uid://dpeatwttaih5y::::res://Assets/bob-head/bob-head2.png<>uid://dv10yuyftiqwi::::res://Assets/bob-head/bob-head1.png
-main_menu.tscn::PackedScene::5588272634664312644::1719169020::0::1::::<><>::res://Scripts/main_menu.gd<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf<>uid://dvgvw37578nmj::::res://Assets/red_car.png
-music_player.tscn::PackedScene::7604195139309738586::1719158237::0::1::::<><>::res://Scripts/music_player.gd<>uid://b64rpfagej75x::::res://Music/Bob MiniJam Title Screen.wav
+main_menu.tscn::PackedScene::5588272634664312644::1719172589::0::1::::<><>::res://Scripts/main_menu.gd<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf<>uid://dvgvw37578nmj::::res://Assets/red_car.png
+music_player.tscn::PackedScene::7604195139309738586::1719172589::0::1::::<><>::res://Scripts/music_player.gd<>uid://b64rpfagej75x::::res://Music/Bob MiniJam Title Screen.wav
 paycheck.tscn::PackedScene::6728879272948759816::1719116860::0::1::::<><>::res://Scripts/paycheck.gd<>uid://bfm2ut7jkovo0::::res://Assets/Paycheck.png<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf
-paycheck_game.tscn::PackedScene::5820607928198652538::1719158237::0::1::::<><>::res://Scripts/paycheck_game.gd<>uid://brp2an7hbk3vf::::res://Scenes/gui.tscn<>uid://cabohf6lo0jvu::::res://Assets/Paper.png<>uid://u1pykpgiaaom::::res://Assets/Folder.png<>uid://b2v6a00j4rcou::::res://Assets/Coffee.png<>uid://c81bec41jkkt7::::res://Assets/Pencil.png
+paycheck_game.tscn::PackedScene::5820607928198652538::1719172589::0::1::::<><>::res://Scripts/paycheck_game.gd<>uid://brp2an7hbk3vf::::res://Scenes/gui.tscn<>uid://cabohf6lo0jvu::::res://Assets/Paper.png<>uid://u1pykpgiaaom::::res://Assets/Folder.png<>uid://b2v6a00j4rcou::::res://Assets/Coffee.png<>uid://c81bec41jkkt7::::res://Assets/Pencil.png
 transition.tscn::PackedScene::5150557603808319048::1719158237::0::1::::<><>::
-transition_screen.tscn::PackedScene::6797946704982734720::1719169020::0::1::::<><>::res://Scripts/transition_screen.gd<>uid://cenp30dmtqlij::::res://Assets/transition/transition-sheet.png
+transition_screen.tscn::PackedScene::6797946704982734720::1719172589::0::1::::<><>::res://Scripts/transition_screen.gd<>uid://cenp30dmtqlij::::res://Assets/transition/transition-sheet.png
 upgrade_menu.tscn::PackedScene::3753922201921391166::1719110830::0::1::::<><>::res://Scripts/upgrade_menu.gd<>uid://brp2an7hbk3vf::::res://Scenes/gui.tscn<>res://Scripts/upgrade_card.gd<>uid://bll85hvug6nbe::::res://Assets/monobit.ttf
-::res://Scripts/::1719169020
+::res://Scripts/::1719171073
 ball.gd::GDScript::-1::1719117253::0::1::::<>Sprite2D<>::
 bottle.gd::GDScript::-1::1719117870::0::1::::<>Node2D<>::
-carnival_game.gd::GDScript::-1::1719169020::0::1::::<>Node2D<>::
+carnival_game.gd::GDScript::-1::1719170043::0::1::::<>Node2D<>::
 dollar_effect.gd::GDScript::-1::1719076868::0::1::::<>Node2D<>::
 game_over.gd::GDScript::-1::1719110892::0::1::::<>Control<>::
-global.gd::GDScript::-1::1719169020::0::1::::<>Node<>::
+global.gd::GDScript::-1::1719170040::0::1::::<>Node<>::
 gui.gd::GDScript::-1::1719169020::0::1::::<>Control<>::
 main_menu.gd::GDScript::-1::1719157844::0::1::::<>Control<>::
 minigame_manager.gd::GDScript::-1::1719115715::0::1::::<>Node<>::
 music_player.gd::GDScript::-1::1719154305::0::1::::<>AudioStreamPlayer<>::
 paycheck.gd::GDScript::-1::1719082252::0::1::::<>Node2D<>::
 paycheck_game.gd::GDScript::-1::1719169020::0::1::::<>Node2D<>::
-timer_slider.gd::GDScript::-1::1719169020::0::1::::<>HSlider<>::
-transition_screen.gd::GDScript::-1::1719169020::0::1::::<>Control<>::
+scene_changer.gd::GDScript::-1::1719169964::0::1::::<>Node<>::
+timer_slider.gd::GDScript::-1::1719169711::0::1::::<>HSlider<>::
+transition_screen.gd::GDScript::-1::1719171073::0::1::::<>CanvasLayer<>::
 upgrade_card.gd::GDScript::-1::1719024252::0::1::::<>Node2D<>::
 upgrade_menu.gd::GDScript::-1::1719156437::0::1::::<>Node2D<>::

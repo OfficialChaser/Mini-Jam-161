@@ -10,3 +10,6 @@ res://Scripts/global.gd
 res://Scripts/scene_changer.gd
 res://Scripts/carnival_game.gd
 res://Scripts/transition_screen.gd
+res://Scenes/upgrade_menu.tscn
+res://Scripts/upgrade_menu.gd
+res://Scripts/upgrade_card.gd

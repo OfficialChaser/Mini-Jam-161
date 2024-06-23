@@ -1,9 +1,9 @@
 extends Node2D
 
-@onready var s_upgrade_text = $SmallUpgradeCard/ColorRect/UpgradeText
-@onready var s_cost_text = $SmallUpgradeCard/ColorRect/CostText
-@onready var l_upgrade_text = $LargeUpgradeCard/ColorRect/UpgradeText
-@onready var l_cost_text = $LargeUpgradeCard/ColorRect/CostText
+@onready var s_upgrade_text = $SmallUpgradeCard/UpgradeText
+@onready var s_cost_text = $SmallUpgradeCard/CostText
+@onready var l_upgrade_text = $LargeUpgradeCard/UpgradeText
+@onready var l_cost_text = $LargeUpgradeCard/CostText
 
 var s_cost_amt := 500
 var l_cost_amt := 1000
